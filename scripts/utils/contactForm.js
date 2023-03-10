@@ -50,7 +50,7 @@ function validateForm(e) {
     showError("error-last", "Le nom de famille ne doit pas être vide et doit contenir au moins 2 caractères")
   }
   // Validate email
-  if (emailRegex.test(email)) {
+  if (!emailRegex.test(email)) {
     hasError = true
     showError("error-email", "L'adresse email est invalide")
   }
@@ -61,9 +61,9 @@ function validateForm(e) {
   }
 
   if (!hasError) {
-    document.getElementById("contact_modal").style.display = "none"
+    closeModal()
     console.log({ firstName, lastName, email, message })
   }
 }
 
-document.getElementById("form").addEventListener("click", validateForm)
+document.getElementById("form").addEventListener("submit", validateForm)
