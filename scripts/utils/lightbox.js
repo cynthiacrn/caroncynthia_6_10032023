@@ -3,15 +3,11 @@ let mediaIndex = 1
 
 function openLightbox() {
   lightbox.style.display = "grid"
-  main.className = "bg_blur"
-  header.className = "bg_blur"
   document.body.style.overflow = "hidden"
 }
 
 function closeLightbox() {
   lightbox.style.display = "none"
-  main.className = "blur_none"
-  header.className = "blur_none"
   document.body.style.overflow = "auto"
 }
 
