@@ -45,8 +45,7 @@ function lightboxNavClavier(event) {
   } else if (event.keyCode === 39) {
     mediaNav(1)
   }
-
-  if (lightbox.style.display === "block" && event.code === "Escape") {
+  if (lightbox.style.display === "grid" && event.code === "Escape") {
     closeLightbox()
   }
 }
